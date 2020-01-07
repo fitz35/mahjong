@@ -1,0 +1,65 @@
+@charset "ISO-8859-1";
+
+#tab_new_donne .pieces_decouvre {
+	width: 40%;
+}
+
+#tab_new_donne .pieces_cache {
+	width: 30%;
+}
+
+#tab_new_donne .pieces_bonus {
+	width: 20%;
+}
+
+#tab_new_donne .highlight {
+	background-color: #46AAC6;
+}
+
+#tab_new_donne td {
+	min-height:90px;
+	height:90px;
+	max-height:90px;
+	vertical-align: middle;
+	padding: 5px;
+}
+/*
+//////////////////////////////////////////////////////////////////////////////////////
+*/
+#img_mahjong_piece_map {
+	height: 350px;
+}
+
+#tab_new_donne .combinaison{
+	border:solid 1px black;
+	display:table-cell;
+}
+
+#tab_new_donne .tab-new-donne-btn-combi{
+	display:table-cell;
+	min-width:35px;
+}
+
+
+#tab_new_donne .input_piece_new_donne{
+	display:table-cell;
+	min-width:110px;
+}
+
+#tab_new_donne .input_piece_new_donne.input_piece_new_donne_with_image{
+	min-width:40px;
+}
+/*
+///////////////////////////////////////////////////////////////////////
+*/
+.tab-new-donne-btn-combi .glyphicon-minus{
+	color:red;
+}
+
+.tab-new-donne-btn-combi .glyphicon-plus{
+	color:green;
+}
+/*
+//////////////////////////////////////////////////////////////////////
+fixer la premiere colonne
+*/

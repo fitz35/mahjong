@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+/*
+tableau
+*/
+
+th {
+	text-align: center;
+}
+
+/*
+tooltip
+
+*/
+#tooltip {
+	position: absolute;
+	z-index: 9999;
+	text-align: center;
+	background-color: white;
+	border-style: solid;
+	font-family: Open Sans, Times, "Times New Roman", Georgia, serif;
+	font-size: 18px;
+	width: 250px;
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+
+
+/*
+////////////////////////////////////////////////////
+*/
+
+.panel-body {
+	padding : 0px;
+	padding-top : 15px;
+	padding-bottom : 15px;
+	text-align : center;
+}
+
+#panel-info-submit .panel-body{
+	text-align:left;
+}

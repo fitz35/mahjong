@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+#annonce_detail_manche{
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid #ddd;
+	padding: 5px;
+	font-size:16px;
+	font-weight: bold;
+}
+
+
+#tab_detail_manche .titre-ligne{
+	vertical-align:middle;
+}
+
+

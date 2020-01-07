@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+
+
+
+
+.infoContenantJButton{
+	padding-top : 15px;
+	margin-top:10px;
+	border-top:solid 1px;
+}
+
+.infoJButton{
+	margin-bottom : 10px;
+}
+
+#mahjongPanelBody select{
+	max-width:120px;
+	min-width:120px;
+}
