@@ -178,9 +178,13 @@ elseif(isset($_POST["retourNouvelleDonne"])){
     $score_dernier = json_decode($_COOKIE["mahjong_partie" . "scores" . $manche], true);
     aff_debug($_COOKIE, "cookie avant effacement :");
     
-    
+    //on modifie le cookie de la partie
+    $informations_manche = json_decode($_COOKIE["mahjong_partiejoueurs"], true);
+    $informations_manche["nb_manches"] = $manche - 1;
+
+    setCookieJoueur(json_encode($informations_manche));
     unsetCookieManche($manche);
-    
+
     aff_debug($_COOKIE, "cookie après effacement :");
     
     for ($j = 1; $j <= 4; $j ++) {

@@ -52,8 +52,8 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
 <div id="<?php echo genIdCombinaison($joueur * 1, $etat, $combi);?>"
 	class="combinaison last">
 	<span class="input_piece_new_donne"> <input
-		name="<?php echo genIdInput($joueur * 1, $etat, $combi, $piece);?>"
-		id="<?php echo genIdInput($joueur * 1, $etat, $combi, $piece);?>"
+		name="<?php echo genIdInput($joueur * 1, $etat, $combi, 1);?>"
+		id="<?php echo genIdInput($joueur * 1, $etat, $combi, 1);?>"
 		type="text" maxlength="2" size="2" class="form-control last">
 
 		<button type="button" class="btn btn-primary supprPiece" value="1">
