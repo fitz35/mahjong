@@ -171,9 +171,19 @@ class Main
             
             //on calcul les noms :
             foreach ($this->_combinaisons as $value) {
-                $this -> _nomCombinaison = array_merge($value -> getNom(), $this->_nomCombinaison);
+                foreach($value -> getNom() as $nomCombi => $nombreCombi)
+                {
+                    if(array_key_exists($nomCombi , $this -> _nomCombinaison))
+                    {
+                        $this -> _nomCombinaison[$nomCombi] += $nombreCombi;
+                    }else{
+                        $this -> _nomCombinaison[$nomCombi] = $nombreCombi;
+                    }
+                }
+                
+               
             }
-            $this -> _nomCombinaison = array_merge($this->_mahjong, $this->_nomCombinaison);
+            $this->_nomCombinaison = array_merge ( $this->_nomCombinaison, $this->_mahjong);
         }
     }
     
@@ -259,32 +269,32 @@ class Main
             }
             
         }
-        aff_debug($temp_debug, "Definition des mahjong du joueur (formater) " . $this->_vent_dominant . " :");
+        aff_debug($temp_debug, "Definition des mahjong du joueur " . $this->_vent_dominant . " avec les combinaisons suivantes :");
         
         //////////////////////////////////////////////////////////////////////////////
         
         if($que_brelan){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_QUE_BRELAN => 1));
+            $this->_mahjong [self::SCORING_MAHJONG_QUE_BRELAN] = 1;
         }
         
         if($que_paire){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_QUE_PAIRES => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_QUE_PAIRES] = 1;
         }
         
         if($que_suite){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_QUE_SUITE => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_QUE_SUITE]= 1;
         }
         
         if($que_majeur){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_QUE_MAJEUR => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_QUE_MAJEUR] = 1;
         }
         
         if($couleur_pur){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_COULEUR_PUR => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_COULEUR_PUR] = 1;
         }elseif($couleur_v_ou_d){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_COULEUR_PUR_DV => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_COULEUR_PUR_DV] = 1;
         }elseif($couleur_trouble){
-            $this->_mahjong = array_merge($this->_mahjong, array(self::SCORING_MAHJONG_COULEUR_TROUBLE => 1));
+            $this->_mahjong[self::SCORING_MAHJONG_COULEUR_TROUBLE] = 1;
         }
         
         

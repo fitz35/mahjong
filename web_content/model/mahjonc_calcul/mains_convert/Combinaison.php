@@ -70,7 +70,7 @@ class Combinaison
     }
     
     /**
-     * recupere les nom des combinaisons
+     * recupere les nom des combinaisons sous la forme array(nomCombi => nombreDeCombi)
      * @return array
      */
     public function getNom() : array {
