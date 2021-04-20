@@ -83,13 +83,35 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
     </span>
 </div>
 
-<!-- tableau a proprement parler -->
-<section id="section_tab_new_donne" class="col-lg-12 table-responsive">
-	<table id="tab_new_donne"
+<!--tableau des joueurs fixe-->
+<table id="tab_new_donne_player"
 		class="table table-bordered table-striped table-condensed">
 		<thead>
 			<tr>
 				<th>joueurs</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php
+			// pour chaque joueur, on genere une ligne
+			for ($joueur = 0; $joueur < 4; $joueur ++) {
+        ?>
+			<tr>
+			<th class="nomJoueur<?php echo $joueur + 1;?> nomj">joueur n°<?php echo $joueur + 1;?></th>
+			</tr>
+		<?php
+		}
+		?>
+		</tbody>
+</table>
+
+<!-- tableau a proprement parler -->
+<section id="section_tab_new_donne" class="table-responsive">
+	<table id="tab_new_donne"
+		class="table table-bordered table-striped table-condensed">
+		<thead>
+			<tr>
+				<!--<th>joueurs</th>-->
 				<th class="pieces_decouvre">pieces découvertes</th>
 				<th class="pieces_cache">pieces cachées</th>
 				<th class="pieces_bonus">pieces bonus</th>
@@ -101,7 +123,7 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
     for ($joueur = 0; $joueur < 4; $joueur ++) {
         ?>
     		<tr id="tab_new_donne_tr_j-<?php echo $joueur + 1;?> tab_new_donne_body">
-				<th class="nomJoueur<?php echo $joueur + 1;?> nomj">joueur n°<?php echo $joueur + 1;?></th>
+				<!--<th class="nomJoueur<?php echo $joueur + 1;?> nomj">joueur n°<?php echo $joueur + 1;?></th>-->
 				<td id="caseNewDonneDecou:<?php echo $joueur + 1;?>" class="tab_new_donne-combi">
 					<?php if(isset($_POST["retourNouvelleDonne"])){
 					    genereInputPieceNewDonne(($joueur + 1), Main::SCORING_EXPOSE, $mains[$joueur + 1]);
@@ -141,7 +163,4 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
     ?>
     		</tbody>
 		</table>
-	</section>
-
-
-
+</section>

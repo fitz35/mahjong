@@ -68,7 +68,7 @@
 				<div class="col-lg-offset-8 col-lg-3" style="margin-top:10px;text-align:left;">
 					<button type="submit" id="nouvelleDonneConfirmer"
 						name="nouvelleDonneConfirmer" class="btn btn-primary btn-block">
-						nouvelle donne</button>
+						valider la donne</button>
 				</div>
 			</div>
 			

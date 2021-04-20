@@ -16,10 +16,10 @@
 	background-color: #46AAC6;
 }
 
-#tab_new_donne td {
-	min-height:90px;
-	height:90px;
-	max-height:90px;
+#tab_new_donne td,#tab_new_donne_player .nomj {
+	min-height:100px;
+	height:100px;
+	max-height:100px;
 	vertical-align: middle;
 	padding: 5px;
 }
@@ -64,6 +64,18 @@
 fixer la premiere colonne
 */
 
-#tab_new_donne_joueurs {
-	width: 10%;
+#tab_new_donne_player{
+	position: absolute;
+	/*top: 10px;*/ 
+	left: 31px;
+	z-index: 40;
+	width: 8%;
+}
+
+#section_tab_new_donne{
+	margin-left: 10%;
+}
+
+#tab_new_donne_player tr:nth-child(even),#tab_new_donne_player thead{
+	background-color:black;
 }
