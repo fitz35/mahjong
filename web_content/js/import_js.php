@@ -5,7 +5,13 @@
     <?php require 'bootstrap-3.3.7/js/bootstrap.min.js';?>
 
     <?php require 'web_content/view/js/gestion_navbar.js';?>
-	<?php require 'web_content/view/js/min/gestion_area_piece.min.js';?>
+	<?php
+		if(DEBUG){
+			require 'web_content/view/js/gestion_area_piece.js';
+		}else{
+			require 'web_content/view/js/min/gestion_area_piece.min.js';
+		}
+	?>
 	<?php require 'web_content/view/js/info_joueur_gestion.js';?>
 	<?php require 'web_content/view/js/gestion_submit.js';?>
 	<?php require 'web_content/view/js/gestion_detail_manche.js';?>

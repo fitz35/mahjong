@@ -101,7 +101,7 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
     for ($joueur = 0; $joueur < 4; $joueur ++) {
         ?>
     		<tr id="tab_new_donne_tr_j-<?php echo $joueur + 1;?> tab_new_donne_body">
-    			<th class="nomJoueur<?php echo $joueur + 1;?> nomj">joueur n°<?php echo $joueur + 1;?></th>
+				<th class="nomJoueur<?php echo $joueur + 1;?> nomj">joueur n°<?php echo $joueur + 1;?></th>
 				<td id="caseNewDonneDecou:<?php echo $joueur + 1;?>" class="tab_new_donne-combi">
 					<?php if(isset($_POST["retourNouvelleDonne"])){
 					    genereInputPieceNewDonne(($joueur + 1), Main::SCORING_EXPOSE, $mains[$joueur + 1]);
@@ -140,9 +140,8 @@ function genereInputPieceNewDonne(string $joueur, string $etat, array $img = arr
     }
     ?>
     		</tbody>
-	</table>
-</section>
-
+		</table>
+	</section>
 
 
 
